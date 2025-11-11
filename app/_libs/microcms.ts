@@ -13,9 +13,9 @@ export type Taste = {
 
 export type Menu = {
   name: string;
-  taste: Taste[];
-  image: MicroCMSImage;
-  description: string;
+  taste?: Taste[];
+  image?: MicroCMSImage;
+  description?: string;
   amount: number;
 } & MicroCMSListContent;
 
