@@ -5,25 +5,18 @@ import styles from "./page.module.css";
 export default async function Page() {
   const data = await getMenuList();
   return (
-    <main className={styles.main}>
+    <main className={styles.main + " " + styles["yusei-magic-regular"]}>
       <section className={styles.top}>
         <h1 className={styles.title}>こもれび</h1>
-        <h2 className={styles.description}>〜あなただけの隠れ家〜</h2>
-        <Image
-          src="/image.png"
-          alt=""
-          width={1920}
-          height={576}
-          className={styles.bgimg}
-        />
+        <h2 className={styles.description}>〜 あなただけの隠れ家 〜</h2>
       </section>
       <section className={styles.news}>
-        <h2 className="text-center">Menu</h2>
+        <h2 className="text-center">〜 Menu 〜</h2>
         <br />
         <ul className="row">
           {data.contents.map((item) => (
             <>
-              <li key={item.id} className="col-5">
+              <li key={item.id} className="col-3">
                 <div className="card">
                   {item.image ? (
                     <div className={styles.link}>
@@ -62,14 +55,14 @@ export default async function Page() {
                         <p className="card-text">{item.amount}円</p>
                       </span>
                     </dt>
-                    <a href="#" className="btn btn-primary">
+                    <br />
+                    <a href="#" className="btn btn-outline-secondary">
                       Go somewhere
                     </a>
                   </dl>
                 </div>
                 <br />
               </li>
-              <li className="col-1"></li>
             </>
           ))}
         </ul>
