@@ -8,7 +8,7 @@ export default async function Page() {
     <main className={styles.main}>
       <section className={styles.top}>
         <h1 className={styles.title}>こもれび</h1>
-        <p className={styles.description}>あなただけの隠れ家</p>
+        <h2 className={styles.description}>〜あなただけの隠れ家〜</h2>
         <Image
           src="/image.png"
           alt=""
