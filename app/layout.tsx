@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "@/app/_components/Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,7 +24,10 @@ export default function RootLayout({
         />
       </head>
       <body className="yusei-magic-regular">
-        <main className="main">{children}</main>
+        <main className="main text-center">
+          <Header />
+          <div className="news">{children}</div>
+        </main>
       </body>
     </html>
   );
