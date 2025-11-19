@@ -39,3 +39,15 @@ export const getMenuList = async (queries?: MicroCMSQueries) => {
   });
   return listData;
 };
+
+export const getMenuDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client.getListDetail<Menu>({
+    endpoint: "menu",
+    contentId,
+    queries,
+  });
+  return detailData;
+};
