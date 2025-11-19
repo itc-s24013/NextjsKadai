@@ -22,7 +22,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="yusei-magic-regular">{children}</body>
+      <body className="yusei-magic-regular">
+        <main className="main">{children}</main>
+      </body>
     </html>
   );
 }

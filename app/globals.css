@@ -35,6 +35,12 @@ body {
   line-height: 1.8;
 }
 
+.main {
+  background-image: url("/background.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .yusei-magic-regular {
   font-family: "Yusei Magic", sans-serif;
   font-weight: 400;
