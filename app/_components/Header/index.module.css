@@ -18,3 +18,18 @@
 .description {
   text-align: center;
 }
+
+@media (max-width: 640px) {
+  .top {
+    padding: 120px 16px;
+  }
+  .title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+}

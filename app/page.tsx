@@ -12,7 +12,7 @@ export default async function Page() {
         {data.contents.map((item) => (
           <>
             <li key={item.id} className="col-3">
-              <div className="card">
+              <div className="card hover-card">
                 {item.image ? (
                   <div className={styles.link}>
                     <Image
