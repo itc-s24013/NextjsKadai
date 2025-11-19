@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 export default async function Page() {
   const data = await getMenuList();
   return (
-    <main className={styles.main}>
+    <div>
       <section className={styles.top}>
         <h1 className={styles.title}>こもれび</h1>
         <h2 className={styles.description}>〜 あなただけの隠れ家 〜</h2>
@@ -67,6 +67,6 @@ export default async function Page() {
           ))}
         </ul>
       </section>
-    </main>
+    </div>
   );
 }
