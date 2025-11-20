@@ -14,7 +14,9 @@ export default async function Page(props: Props) {
   return (
     <>
       <br />
-      <MenuImage img={data.image} />
+      <div className="d-flex justify-content-center">
+        <MenuImage img={data.image} />
+      </div>
       <dl>
         <dt>{data.name}</dt>
         <dt className={styles.meta}>
