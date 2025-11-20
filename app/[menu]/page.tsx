@@ -17,18 +17,32 @@ export default async function Page(props: Props) {
       <div className="d-flex justify-content-center">
         <MenuImage img={data.image} />
       </div>
+      <br />
       <dl>
-        <dt>{data.name}</dt>
+        <dt>
+          <h1>
+            <strong>〜{data.name}〜</strong>
+          </h1>
+          <br />
+        </dt>
         <dt className={styles.meta}>
           <span className={styles.tag}>
             {data.taste && data.taste.length > 0 ? (
-              data.taste.map((taste) => <p key={taste.id}>{taste.flavor}</p>)
+              <>
+                {data.taste.map((taste) => (
+                  <h2 key={taste.id}>{taste.flavor}</h2>
+                ))}
+                <br />
+              </>
             ) : (
-              <p>味の情報はありません</p>
+              <>
+                <h2>味の情報はありません</h2>
+                <br />
+              </>
             )}
           </span>
           <span className={styles.tag}>
-            <p>{data.amount}円</p>
+            <h2>{data.amount}円</h2>
           </span>
         </dt>
         <br />
