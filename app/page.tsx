@@ -33,23 +33,22 @@ export default async function Page() {
                   )}
                   <dl className="card-body">
                     <dt className="card-title">{item.name}</dt>
-                    <dt className={styles.meta}>
-                      <span className={styles.tag}>
+                    <dt>
+                      <span className={styles.flavor}>
                         {item.taste && item.taste.length > 0 ? (
                           item.taste.map((taste) => (
-                            <p key={taste.id} className="card-text">
+                            <span key={taste.id} className="card-text">
                               {taste.flavor}
-                            </p>
+                            </span>
                           ))
                         ) : (
                           <p className="card-text">味の情報はありません</p>
                         )}
                       </span>
-                      <span className={styles.tag}>
+                      <span>
                         <p className="card-text">{item.amount}円</p>
                       </span>
                     </dt>
-                    <br />
                   </dl>
                 </a>
               </div>
