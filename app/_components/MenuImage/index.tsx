@@ -6,9 +6,14 @@ export default function MenuImage({ img }: { img?: MicroCMSImage }) {
   return (
     <div className={styles.img}>
       {img ? (
-        <Image src={img.url} alt="" fill={true} />
+        <Image src={img.url} alt="" fill={true} className={styles.imgSetting} />
       ) : (
-        <Image src="/no-img.png" alt="" fill={true} />
+        <Image
+          src="/no-img.png"
+          alt=""
+          fill={true}
+          className={styles.imgSetting}
+        />
       )}
     </div>
   );

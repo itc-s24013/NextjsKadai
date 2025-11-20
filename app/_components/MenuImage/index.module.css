@@ -3,3 +3,7 @@
   padding-top: 50%;
   position: relative;
 }
+
+.imgSetting {
+  border-radius: var(--border-radius);
+}
