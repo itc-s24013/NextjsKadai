@@ -44,6 +44,10 @@ export default async function Page(props: Props) {
           <span className={styles.tag}>
             <h2>{data.amount}円</h2>
           </span>
+          <br />
+          <span>
+            <h3>{data.description}</h3>
+          </span>
         </dt>
         <br />
       </dl>
