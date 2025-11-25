@@ -1,6 +1,7 @@
 import { getMenuDetail } from "../_libs/microcms";
 import styles from "../page.module.css";
 import MenuImage from "../_components/MenuImage";
+import Link from "next/link";
 
 type Props = {
   params: {
@@ -49,8 +50,10 @@ export default async function Page(props: Props) {
             <h3>{data.description}</h3>
           </span>
         </dt>
-        <br />
       </dl>
+      <Link href="/" className="btn btn-outline-secondary">
+        ホームに戻る
+      </Link>
     </>
   );
 }
