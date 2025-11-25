@@ -25,7 +25,7 @@ export default async function MenuList({ menu }: Props) {
           <>
             <li key={item.id} className="col-3">
               <div className={"card " + styles["hover-card"]}>
-                <a href={`./${item.id}`}>
+                <a href={`/${item.id}`}>
                   {item.image ? (
                     <Image
                       src={item.image?.url}
