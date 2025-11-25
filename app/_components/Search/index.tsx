@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import styles from "./index.module.css";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Search() {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,7 +28,12 @@ export default function Search() {
           height={25}
           loading="eager"
         />
-        <input type="text" name="q" className={styles.searchInput} />
+        <input
+          type="text"
+          name="q"
+          className={styles.searchInput}
+          defaultValue={searchParams.get("q") ?? undefined}
+        />
       </label>
     </form>
   );
