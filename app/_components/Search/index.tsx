@@ -3,8 +3,10 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
+import { defaultConfig } from "next/dist/server/config-shared";
 
-export default function Search() {
+function SearchFieldComponent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -36,5 +38,13 @@ export default function Search() {
         />
       </label>
     </form>
+  );
+}
+
+export default function Search() {
+  return (
+    <Suspense>
+      <SearchFieldComponent />
+    </Suspense>
   );
 }
