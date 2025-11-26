@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# カフェこもれびのホームページ
 
-## Getting Started
+## 使用技術
 
-First, run the development server:
+- microCMS
+- Next.js
+- BootStrap
+- Vercel
+- GitHub
+- GoogleFont(yusei-magic-regular)
+- ChatGPT,Gemini(画像生成)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## microCMS に作成したデータ
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### menu
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- name(メニュー名): テキストフィールド
+- taste(味)?: 複数コンテンツ参照-味
+- image(画像)?: 画像
+- description(説明)?: テキストエリア
+- amount(値段): 数字
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 味
 
-## Learn More
+- flavor(味): テキストフィールド
 
-To learn more about Next.js, take a look at the following resources:
+## 機能
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- メニュー一覧表示
+- メニュー詳細表示
+- メニュー検索
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## ディレクトリ構造
 
-## Deploy on Vercel
+### app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ホーム画面(page.tsx,page.module.css)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### app/\_components
+
+- Header
+- メニュー詳細画面での画像(MenuImage)
+- メニュー一覧表示(MenuList)
+- メニュー検索機能(Search)
+
+### app/\_libs
+
+- microCMS からデータをとってくる(microcms.ts)
+
+### app/[menu]/
+
+- メニュー詳細画面(page.tsx,page.module.css)
+- 検索結果(search/page.tsx)
