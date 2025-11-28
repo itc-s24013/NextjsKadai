@@ -32,22 +32,4 @@
 
 ## ディレクトリ構造
 
-### app
-
-- ホーム画面(page.tsx,page.module.css)
-
-### app/\_components
-
-- Header
-- メニュー詳細画面での画像(MenuImage)
-- メニュー一覧表示(MenuList)
-- メニュー検索機能(Search)
-
-### app/\_libs
-
-- microCMS からデータをとってくる(microcms.ts)
-
-### app/[menu]/
-
-- メニュー詳細画面(page.tsx,page.module.css)
-- 検索結果(search/page.tsx)
+![ディレクトリ構造](https://github.com/user-attachments/assets/039de470-1465-4005-a7c1-0159c2535ace)
